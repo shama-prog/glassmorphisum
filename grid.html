@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Grid Animation</title>
+	<style>
+	.box {
+		margin-top: 20px;
+		margin-left: 200px;
+
+	}
+	.square {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+
+
+}
+	</style>
+</head>
+<body>
+	<table class="box">
+		<tr>
+			<th>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+			</th>
+		</tr>
+		<tr>
+			<th>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+				<td><div class="square"></div></td>
+			</th>
+		</tr>
+	</table>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+	<script>
+	anime({
+  targets: '.square',
+  loop: '3',
+  scale: [
+    {value: .1, easing: 'easeOutSine', duration: 500},
+    {value: 1, easing: 'easeInOutQuad', duration: 1200}
+  ],
+  delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
+});
+	</script>
+</body>
+</html>
